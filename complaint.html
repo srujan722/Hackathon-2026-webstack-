@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AquaPulse - Resident Complaint Form</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-tertiary-fixed-variant": "#004c69",
+                      "on-error": "#ffffff",
+                      "surface-container-highest": "#e0e3e5",
+                      "on-surface": "#191c1e",
+                      "secondary": "#006b5f",
+                      "on-secondary-fixed-variant": "#005048",
+                      "on-secondary-container": "#006f64",
+                      "on-primary": "#ffffff",
+                      "surface-container": "#eceef0",
+                      "surface": "#f7f9fb",
+                      "surface-container-high": "#e6e8ea",
+                      "on-primary-fixed-variant": "#004b73",
+                      "primary-container": "#007bb9",
+                      "surface-bright": "#f7f9fb",
+                      "on-background": "#191c1e",
+                      "on-secondary-fixed": "#00201c",
+                      "on-tertiary-fixed": "#001e2c",
+                      "tertiary": "#006387",
+                      "surface-variant": "#e0e3e5",
+                      "on-tertiary": "#ffffff",
+                      "surface-dim": "#d8dadc",
+                      "outline-variant": "#bfc7d2",
+                      "tertiary-fixed": "#c4e7ff",
+                      "secondary-container": "#6df5e1",
+                      "tertiary-fixed-dim": "#7bd0ff",
+                      "on-surface-variant": "#3f4850",
+                      "on-primary-container": "#fdfcff",
+                      "inverse-on-surface": "#eff1f3",
+                      "on-secondary": "#ffffff",
+                      "primary-fixed": "#cce5ff",
+                      "secondary-fixed": "#71f8e4",
+                      "outline": "#707881",
+                      "primary": "#006194",
+                      "inverse-surface": "#2d3133",
+                      "tertiary-container": "#007da9",
+                      "on-tertiary-container": "#fcfcff",
+                      "on-primary-fixed": "#001d31",
+                      "surface-tint": "#006398",
+                      "surface-container-low": "#f2f4f6",
+                      "background": "#f7f9fb",
+                      "surface-container-lowest": "#ffffff",
+                      "on-error-container": "#93000a",
+                      "error-container": "#ffdad6",
+                      "inverse-primary": "#93ccff",
+                      "secondary-fixed-dim": "#4fdbc8",
+                      "primary-fixed-dim": "#93ccff",
+                      "error": "#ba1a1a"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "container-padding": "32px",
+                      "gutter": "24px",
+                      "card-gap": "20px",
+                      "base": "8px"
+              },
+              "fontFamily": {
+                      "title-sm": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "display-lg": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "body-sm": [
+                              "Inter"
+                      ],
+                      "label-caps": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "display-lg-mobile": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "title-sm": [
+                              "18px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-sm": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-caps": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "display-lg-mobile": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border-top: 1.5px solid rgba(255, 255, 255, 0.5);
+            border-left: 1.5px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 20px 25px -5px rgba(2, 132, 199, 0.05);
+        }
+        .form-input {
+            background: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            transition: all 0.2s ease;
+        }
+        .form-input:focus {
+            outline: none;
+            border-color: #006194;
+            box-shadow: 0 0 0 2px rgba(0, 97, 148, 0.2);
+            background: rgba(255, 255, 255, 0.9);
+        }
+      </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen flex flex-col font-body-sm">
+<!-- TopNavBar: Suppressed because this is a transactional form (sub-page) -->
+<!-- SideNavBar: Suppressed because this is a transactional form (sub-page) -->
+<main class="flex-grow flex items-center justify-center py-16 px-4 sm:px-6 lg:px-8">
+<div class="w-full max-w-3xl">
+<!-- Header Section -->
+<div class="mb-8 text-center">
+<div class="inline-flex items-center justify-center p-3 bg-primary-container rounded-full mb-4 shadow-sm">
+<span class="material-symbols-outlined text-on-primary-container text-3xl" style="font-variation-settings: 'FILL' 1;">report_problem</span>
+</div>
+<h1 class="font-display-lg text-display-lg md:font-display-lg md:text-display-lg text-primary tracking-tight">Report an Issue</h1>
+<p class="mt-2 text-on-surface-variant text-body-md font-body-md max-w-xl mx-auto">
+                    Submit a detailed report to the AquaPulse municipal engineering team. Your ticket (LAV-2026-XXX) will be generated upon successful submission.
+                </p>
+</div>
+<!-- Form Container (Glassmorphism) -->
+<div class="glass-card rounded-2xl overflow-hidden border border-outline-variant/30">
+<form action="#" class="p-6 md:p-8 space-y-8" method="POST">
+<!-- Section: Categorization -->
+<div class="space-y-6">
+<div class="flex items-center gap-3 pb-2 border-b border-outline-variant/20">
+<span class="material-symbols-outlined text-secondary">category</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Categorization</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Category Dropdown -->
+<div>
+<label class="block font-label-caps text-label-caps text-on-surface-variant mb-2" for="category">Issue Category</label>
+<div class="relative">
+<select class="form-input mt-1 block w-full pl-3 pr-10 py-3 text-base border-outline-variant/50 focus:border-primary sm:text-sm rounded-lg text-on-surface" id="category" name="category">
+<option disabled="" selected="" value="">Select category...</option>
+<option value="no_water">No Water Supply</option>
+<option value="leakage">Pipeline Leakage</option>
+<option value="contamination">Water Contamination</option>
+<option value="meter_issue">Meter Issue</option>
+<option value="other">Other</option>
+</select>
+</div>
+</div>
+<!-- Urgency Level -->
+<div>
+<label class="block font-label-caps text-label-caps text-on-surface-variant mb-2">Urgency Level</label>
+<div class="flex gap-4 mt-1">
+<label class="flex-1 cursor-pointer">
+<input class="peer sr-only" name="urgency" type="radio" value="low"/>
+<div class="rounded-lg border border-outline-variant/50 p-3 text-center peer-checked:bg-secondary-container/20 peer-checked:border-secondary peer-checked:text-on-secondary-container transition-all hover:bg-surface-container-high text-body-sm font-body-sm">
+                                            Low
+                                        </div>
+</label>
+<label class="flex-1 cursor-pointer">
+<input checked="" class="peer sr-only" name="urgency" type="radio" value="medium"/>
+<div class="rounded-lg border border-outline-variant/50 p-3 text-center peer-checked:bg-primary-container/20 peer-checked:border-primary peer-checked:text-primary transition-all hover:bg-surface-container-high text-body-sm font-body-sm">
+                                            Medium
+                                        </div>
+</label>
+<label class="flex-1 cursor-pointer">
+<input class="peer sr-only" name="urgency" type="radio" value="high"/>
+<div class="rounded-lg border border-outline-variant/50 p-3 text-center peer-checked:bg-error-container/20 peer-checked:border-error peer-checked:text-on-error-container transition-all hover:bg-surface-container-high text-body-sm font-body-sm">
+                                            High
+                                        </div>
+</label>
+</div>
+</div>
+</div>
+</div>
+<!-- Section: Details -->
+<div class="space-y-6">
+<div class="flex items-center gap-3 pb-2 border-b border-outline-variant/20">
+<span class="material-symbols-outlined text-secondary">description</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Issue Details</h2>
+</div>
+<div>
+<label class="block font-label-caps text-label-caps text-on-surface-variant mb-2" for="title">Complaint Title</label>
+<input class="form-input shadow-sm focus:ring-primary focus:border-primary block w-full sm:text-sm border-outline-variant/50 rounded-lg py-3 px-4 text-on-surface" id="title" name="title" placeholder="e.g., Major leak near Sector 4 junction" type="text"/>
+<!-- Validation Indicator (Simulated) -->
+<p class="mt-2 text-sm text-error hidden" id="title-error">Title is required.</p>
+</div>
+<div>
+<label class="block font-label-caps text-label-caps text-on-surface-variant mb-2" for="description">Detailed Description</label>
+<div class="mt-1">
+<textarea class="form-input shadow-sm focus:ring-primary focus:border-primary block w-full sm:text-sm border-outline-variant/50 rounded-lg py-3 px-4 text-on-surface resize-none" id="description" name="description" placeholder="Please describe the issue in detail, noting any specific landmarks or times..." rows="4"></textarea>
+</div>
+</div>
+</div>
+<!-- Section: Location -->
+<div class="space-y-6">
+<div class="flex items-center gap-3 pb-2 border-b border-outline-variant/20">
+<span class="material-symbols-outlined text-secondary">pin_drop</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Location</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Zone Dropdown -->
+<div>
+<label class="block font-label-caps text-label-caps text-on-surface-variant mb-2" for="zone">Zone</label>
+<select class="form-input mt-1 block w-full pl-3 pr-10 py-3 text-base border-outline-variant/50 focus:border-primary sm:text-sm rounded-lg text-on-surface" id="zone" name="zone">
+<option disabled="" selected="" value="">Select zone...</option>
+<option value="dasve">Dasve</option>
+<option value="mugaon">Mugaon</option>
+<option value="dhamanohol">Dhamanohol</option>
+</select>
+</div>
+<!-- Specific Location -->
+<div>
+<label class="block font-label-caps text-label-caps text-on-surface-variant mb-2" for="location_details">Specific Location / Landmark</label>
+<input class="form-input shadow-sm focus:ring-primary focus:border-primary block w-full sm:text-sm border-outline-variant/50 rounded-lg py-3 px-4 text-on-surface" id="location_details" name="location_details" placeholder="e.g., Opposite Building B, Gate 2" type="text"/>
+</div>
+</div>
+</div>
+<!-- Section: Media -->
+<div class="space-y-6">
+<div class="flex items-center gap-3 pb-2 border-b border-outline-variant/20">
+<span class="material-symbols-outlined text-secondary">image</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Evidence (Optional)</h2>
+</div>
+<div class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-outline-variant/50 border-dashed rounded-xl bg-surface-container-lowest/50 hover:bg-surface-container-low transition-colors cursor-pointer group">
+<div class="space-y-2 text-center">
+<span class="material-symbols-outlined text-4xl text-outline group-hover:text-primary transition-colors">add_photo_alternate</span>
+<div class="flex text-sm text-on-surface-variant justify-center">
+<label class="relative cursor-pointer rounded-md font-medium text-primary hover:text-primary-container focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-primary" for="file-upload">
+<span>Upload a file</span>
+<input class="sr-only" id="file-upload" name="file-upload" type="file"/>
+</label>
+<p class="pl-1">or drag and drop</p>
+</div>
+<p class="text-xs text-outline">PNG, JPG, GIF up to 10MB</p>
+</div>
+</div>
+</div>
+<!-- Actions -->
+<div class="pt-6 flex items-center justify-between border-t border-outline-variant/20">
+<button class="px-6 py-3 border border-primary text-primary font-title-sm text-title-sm rounded-lg hover:bg-primary/5 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary" type="button">
+                            Cancel
+                        </button>
+<button class="px-8 py-3 bg-primary text-on-primary font-title-sm text-title-sm rounded-lg shadow-md hover:bg-primary/90 transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary flex items-center gap-2" type="submit">
+<span>Submit Ticket</span>
+<span class="material-symbols-outlined" style="font-size: 20px;">send</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+</main>
+<!-- Footer: Shared Component -->
+<footer class="bg-surface-container-highest dark:bg-surface-container-high border-t border-outline-variant/30 flex flex-col md:flex-row justify-between items-center px-container-padding py-gutter w-full mt-auto">
+<div class="font-title-sm text-title-sm font-bold text-on-surface mb-4 md:mb-0">
+            © 2024 Lavasa Corporation. Professional Government-Grade Water Management.
+        </div>
+<div class="flex gap-6">
+<a class="font-body-sm text-body-sm text-on-surface-variant/80 hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant/80 hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant/80 hover:text-primary transition-colors" href="#">Help Center</a>
+</div>
+</footer>
+</body></html>

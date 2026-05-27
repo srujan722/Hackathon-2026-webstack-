@@ -1,0 +1,7 @@
+/* Tailwind is loaded via CDN in index.html for this Stitch design implementation */
+/* Additional global overrides can go here if needed */
+
+body {
+  margin: 0;
+  padding: 0;
+}
